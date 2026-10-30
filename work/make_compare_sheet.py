@@ -22,7 +22,7 @@ CLEAN = os.path.join(ROOT, "data", "clean3")
 ap = argparse.ArgumentParser()
 ap.add_argument("--lora", required=True)
 ap.add_argument("--rank", type=int, default=32)
-ap.add_argument("--scales", default="1.0")
+ap.add_argument("--scales", default="0.9")
 ap.add_argument("--ids", default="tiga,zero,gomora,zetton,ultraman,gaia")
 ap.add_argument("--steps", type=int, default=28)
 ap.add_argument("--cfg", type=float, default=6.0)
@@ -104,7 +104,7 @@ for r, (label, style) in enumerate(rows):
             if style == "name":
                 prompt = "%s, tokusatsu, full body, cinematic lighting, best quality" % meta[i]["en"]
             else:
-                prompt = "%s, %s, tokusatsu, full body, cinematic lighting, best quality" % (
+                prompt = "%s, %s, single character, tokusatsu, full body, cinematic lighting, best quality" % (
                     meta[i]["en"], meta[i]["desc"])
             g = torch.Generator(device="cpu").manual_seed(1234 + c)
             img = pipe(prompt=prompt, negative_prompt=NEGATIVE,
