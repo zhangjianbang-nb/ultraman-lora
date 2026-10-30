@@ -1,0 +1,509 @@
+{
+  "tiga": {
+    "in": 32,
+    "kept": 13,
+    "dropped": 19,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 9,
+      "letterbox": 10
+    },
+    "sim_mean": 0.896
+  },
+  "zero": {
+    "in": 32,
+    "kept": 19,
+    "dropped": 13,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 10,
+      "seam": 3
+    },
+    "sim_mean": 0.892
+  },
+  "ultraman": {
+    "in": 32,
+    "kept": 15,
+    "dropped": 17,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 11,
+      "seam": 8
+    },
+    "sim_mean": 0.849
+  },
+  "seven": {
+    "in": 32,
+    "kept": 18,
+    "dropped": 14,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 10,
+      "seam": 4
+    },
+    "sim_mean": 0.888
+  },
+  "jack": {
+    "in": 32,
+    "kept": 16,
+    "dropped": 16,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 11,
+      "seam": 6
+    },
+    "sim_mean": 0.833
+  },
+  "ace": {
+    "in": 32,
+    "kept": 16,
+    "dropped": 16,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 9,
+      "seam": 9
+    },
+    "sim_mean": 0.853
+  },
+  "taro": {
+    "in": 32,
+    "kept": 15,
+    "dropped": 17,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 10,
+      "seam": 10
+    },
+    "sim_mean": 0.876
+  },
+  "leo": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 21,
+    "forced_back": 1,
+    "reasons": {
+      "seam": 4,
+      "letterbox": 18
+    },
+    "sim_mean": 0.863
+  },
+  "eighty": {
+    "in": 32,
+    "kept": 14,
+    "dropped": 18,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 11,
+      "seam": 12
+    },
+    "sim_mean": 0.809
+  },
+  "dyna": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 21,
+    "forced_back": 1,
+    "reasons": {
+      "letterbox": 15,
+      "seam": 10
+    },
+    "sim_mean": 0.896
+  },
+  "gaia": {
+    "in": 32,
+    "kept": 18,
+    "dropped": 14,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 6,
+      "letterbox": 9
+    },
+    "sim_mean": 0.875
+  },
+  "agul": {
+    "in": 32,
+    "kept": 13,
+    "dropped": 19,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 14,
+      "seam": 5
+    },
+    "sim_mean": 0.829
+  },
+  "cosmos": {
+    "in": 32,
+    "kept": 16,
+    "dropped": 16,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 9,
+      "letterbox": 8,
+      "textband": 1
+    },
+    "sim_mean": 0.863
+  },
+  "nexus": {
+    "in": 32,
+    "kept": 14,
+    "dropped": 18,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 16,
+      "seam": 3
+    },
+    "sim_mean": 0.888
+  },
+  "mebius": {
+    "in": 32,
+    "kept": 17,
+    "dropped": 15,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 11,
+      "letterbox": 5
+    },
+    "sim_mean": 0.869
+  },
+  "hikari": {
+    "in": 32,
+    "kept": 16,
+    "dropped": 16,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 5,
+      "letterbox": 11
+    },
+    "sim_mean": 0.87
+  },
+  "ginga": {
+    "in": 32,
+    "kept": 15,
+    "dropped": 17,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 9,
+      "seam": 8
+    },
+    "sim_mean": 0.874
+  },
+  "orb": {
+    "in": 32,
+    "kept": 19,
+    "dropped": 13,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 10,
+      "letterbox": 4
+    },
+    "sim_mean": 0.902
+  },
+  "geed": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 24,
+    "forced_back": 4,
+    "reasons": {
+      "seam": 15,
+      "letterbox": 10
+    },
+    "sim_mean": 0.891
+  },
+  "z": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 20,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 8,
+      "letterbox": 14
+    },
+    "sim_mean": 0.903
+  },
+  "trigger": {
+    "in": 32,
+    "kept": 13,
+    "dropped": 19,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 11,
+      "seam": 8
+    },
+    "sim_mean": 0.884
+  },
+  "decker": {
+    "in": 32,
+    "kept": 18,
+    "dropped": 14,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 10,
+      "seam": 4
+    },
+    "sim_mean": 0.873
+  },
+  "blazar": {
+    "in": 32,
+    "kept": 21,
+    "dropped": 11,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 8,
+      "seam": 4
+    },
+    "sim_mean": 0.871
+  },
+  "arc": {
+    "in": 32,
+    "kept": 21,
+    "dropped": 11,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 8,
+      "seam": 6
+    },
+    "sim_mean": 0.804
+  },
+  "gomora": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 22,
+    "forced_back": 2,
+    "reasons": {
+      "letterbox": 14,
+      "seam": 10
+    },
+    "sim_mean": 0.82
+  },
+  "zetton": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 21,
+    "forced_back": 1,
+    "reasons": {
+      "seam": 14,
+      "letterbox": 10
+    },
+    "sim_mean": 0.849
+  },
+  "baltan": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 24,
+    "forced_back": 4,
+    "reasons": {
+      "letterbox": 20,
+      "seam": 7
+    },
+    "sim_mean": 0.858
+  },
+  "redking": {
+    "in": 32,
+    "kept": 14,
+    "dropped": 18,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 12,
+      "seam": 7
+    },
+    "sim_mean": 0.755
+  },
+  "eleking": {
+    "in": 32,
+    "kept": 13,
+    "dropped": 19,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 11,
+      "seam": 13
+    },
+    "sim_mean": 0.735
+  },
+  "mephilas": {
+    "in": 32,
+    "kept": 19,
+    "dropped": 13,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 9,
+      "seam": 4
+    },
+    "sim_mean": 0.775
+  },
+  "tyrant": {
+    "in": 32,
+    "kept": 15,
+    "dropped": 17,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 8,
+      "seam": 9
+    },
+    "sim_mean": 0.825
+  },
+  "gatanothor": {
+    "in": 32,
+    "kept": 17,
+    "dropped": 15,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 11,
+      "letterbox": 6
+    },
+    "sim_mean": 0.739
+  },
+  "golza": {
+    "in": 32,
+    "kept": 12,
+    "dropped": 21,
+    "forced_back": 1,
+    "reasons": {
+      "letterbox": 14,
+      "seam": 8
+    },
+    "sim_mean": 0.8
+  },
+  "empera": {
+    "in": 32,
+    "kept": 14,
+    "dropped": 18,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 13,
+      "letterbox": 5
+    },
+    "sim_mean": 0.798
+  },
+  "nagano": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 13,
+    "forced_back": 1,
+    "reasons": {
+      "letterbox": 6,
+      "seam": 11
+    },
+    "sim_mean": 0.752
+  },
+  "tsuruno": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 13,
+    "forced_back": 1,
+    "reasons": {
+      "letterbox": 10,
+      "seam": 6
+    },
+    "sim_mean": 0.849
+  },
+  "yoshioka": {
+    "in": 18,
+    "kept": 12,
+    "dropped": 11,
+    "forced_back": 5,
+    "reasons": {
+      "seam": 9,
+      "letterbox": 2
+    },
+    "sim_mean": 0.582
+  },
+  "igarashi": {
+    "in": 24,
+    "kept": 13,
+    "dropped": 11,
+    "forced_back": 0,
+    "reasons": {
+      "seam": 5,
+      "letterbox": 6
+    },
+    "sim_mean": 0.859
+  },
+  "ishiguro": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 13,
+    "forced_back": 1,
+    "reasons": {
+      "letterbox": 4,
+      "seam": 9
+    },
+    "sim_mean": 0.867
+  },
+  "hamada": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 14,
+    "forced_back": 2,
+    "reasons": {
+      "seam": 8,
+      "letterbox": 7
+    },
+    "sim_mean": 0.824
+  },
+  "hirano": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 16,
+    "forced_back": 4,
+    "reasons": {
+      "letterbox": 13,
+      "seam": 5
+    },
+    "sim_mean": 0.76
+  },
+  "terasaka": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 14,
+    "forced_back": 2,
+    "reasons": {
+      "seam": 9,
+      "letterbox": 7
+    },
+    "sim_mean": 0.563
+  },
+  "warabino": {
+    "in": 24,
+    "kept": 13,
+    "dropped": 11,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 7,
+      "seam": 5
+    },
+    "sim_mean": 0.557
+  },
+  "kurobe": {
+    "in": 24,
+    "kept": 12,
+    "dropped": 15,
+    "forced_back": 3,
+    "reasons": {
+      "seam": 14,
+      "letterbox": 3
+    },
+    "sim_mean": 0.54
+  },
+  "moritsugu": {
+    "in": 24,
+    "kept": 15,
+    "dropped": 9,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 6,
+      "seam": 4
+    },
+    "sim_mean": 0.606
+  },
+  "nishina": {
+    "in": 24,
+    "kept": 15,
+    "dropped": 9,
+    "forced_back": 0,
+    "reasons": {
+      "letterbox": 8,
+      "seam": 3
+    },
+    "sim_mean": 0.701
+  }
+}

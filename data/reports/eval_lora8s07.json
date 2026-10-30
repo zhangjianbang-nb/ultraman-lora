@@ -1,0 +1,146 @@
+{
+ "tag": "lora8s07",
+ "style": "name",
+ "n": 4,
+ "accuracy": 0.125,
+ "correct": 4,
+ "total": 32,
+ "per_id": {
+  "baltan": {
+   "prompt": "alien baltan, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "baltan",
+    "seven",
+    "seven",
+    "gatanothor"
+   ],
+   "sim": [
+    0.741,
+    0.576,
+    0.7,
+    0.725
+   ],
+   "hit": 1,
+   "n": 4
+  },
+  "redking": {
+   "prompt": "red king, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "seven",
+    "seven",
+    "gatanothor",
+    "seven"
+   ],
+   "sim": [
+    0.832,
+    0.659,
+    0.6,
+    0.628
+   ],
+   "hit": 0,
+   "n": 4
+  },
+  "gomora": {
+   "prompt": "gomora, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "seven",
+    "seven",
+    "seven",
+    "eleking"
+   ],
+   "sim": [
+    0.755,
+    0.652,
+    0.774,
+    0.599
+   ],
+   "hit": 0,
+   "n": 4
+  },
+  "gatanothor": {
+   "prompt": "gatanothor, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "seven",
+    "seven",
+    "seven",
+    "seven"
+   ],
+   "sim": [
+    0.758,
+    0.771,
+    0.817,
+    0.854
+   ],
+   "hit": 0,
+   "n": 4
+  },
+  "golza": {
+   "prompt": "golza, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "seven",
+    "seven",
+    "seven",
+    "seven"
+   ],
+   "sim": [
+    0.788,
+    0.808,
+    0.682,
+    0.72
+   ],
+   "hit": 0,
+   "n": 4
+  },
+  "seven": {
+   "prompt": "ultraseven, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "seven",
+    "seven",
+    "gatanothor",
+    "seven"
+   ],
+   "sim": [
+    0.806,
+    0.715,
+    0.518,
+    0.781
+   ],
+   "hit": 3,
+   "n": 4
+  },
+  "eleking": {
+   "prompt": "eleking, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "gatanothor",
+    "seven",
+    "seven",
+    "seven"
+   ],
+   "sim": [
+    0.561,
+    0.8,
+    0.773,
+    0.822
+   ],
+   "hit": 0,
+   "n": 4
+  },
+  "tyrant": {
+   "prompt": "tyrant, tokusatsu, full body, cinematic lighting, best quality",
+   "pred": [
+    "seven",
+    "seven",
+    "seven",
+    "seven"
+   ],
+   "sim": [
+    0.79,
+    0.819,
+    0.766,
+    0.817
+   ],
+   "hit": 0,
+   "n": 4
+  }
+ }
+}

@@ -58,12 +58,29 @@ for _id, _m in META.items():
     for _a in EXTRA.get(_id, []):
         ALIASES[_a] = _id
 
-SUFFIX = "full body, tokusatsu, cinematic lighting, best quality"
+# exactly the short caption the LoRA was trained on with caption dropout:
+# "<english name>, tokusatsu, full body"
+SUFFIX = "tokusatsu, full body, cinematic lighting, best quality"
+
+# The training images are scraped web pictures: many carry subtitles, magazine watermarks
+# and two-panel collages, and the LoRA learned to reproduce that. A negative prompt is the
+# cheapest fix -- it costs nothing at training time and removes most of the pollution.
+NEGATIVE = ("text, watermark, subtitle, logo, lettering, japanese text, "
+            "multiple people, two characters, collage, split screen, "
+            "close-up portrait, cropped head, extra limbs, deformed")
 
 
-def _caption(i):
-    m = META[i]
-    return "%s, %s" % (m["en"], m["desc"])
+def _caption(i, style="desc"):
+    """Two caption paths the LoRA was trained on.
+
+    style="name"  -- name only; this is the pure binding test (does the NAME alone work?)
+    style="desc"  -- name + the canonical appearance sentence; stronger for actual
+                     generation, because it is the exact full caption the LoRA saw 60%
+                     of the time during training.
+    """
+    if style == "name":
+        return META[i]["en"]
+    return "%s, %s" % (META[i]["en"], META[i]["desc"])
 
 
 def find_names(text):
@@ -85,7 +102,7 @@ def find_names(text):
     return [(i, text[s:e]) for s, e, i in picked]
 
 
-def normalize(text, suffix=SUFFIX, keep_extra=True):
+def normalize(text, suffix=SUFFIX, keep_extra=True, style="desc"):
     """Rewrite a Chinese prompt into the English tag space the LoRA knows."""
     hits = find_names(text)
     if not hits:
@@ -93,16 +110,28 @@ def normalize(text, suffix=SUFFIX, keep_extra=True):
     caps = []
     for i, _ in hits:
         if i not in [c.split(",")[0] for c in caps]:
-            caps.append(_caption(i))
+            caps.append(_caption(i, style))
     rest = text
     for _, mt in hits:
         rest = rest.replace(mt, " ")
     rest = re.sub(r"\s+", " ", rest).strip(" ,，、")
     rest = re.sub(r"^(生成|请|帮我|给我|画|生|来|一只|一张|一个)+", "", rest).strip(" ,，、")
+    # CLIP cannot read Chinese, so leftover Chinese scene text is dropped instead of
+    # being fed in as noise; ASCII extras (e.g. "at night, raining") are kept.
+    if rest and not rest.isascii():
+        rest = " ".join(w for w in rest.split() if w.isascii())
     parts = caps + ([rest] if keep_extra and rest else [])
     if suffix:
         parts.append(suffix)
-    return ", ".join(parts)
+    # dedupe tags: "tokusatsu suit, tokusatsu, full body" would otherwise repeat itself
+    seen, out = set(), []
+    for p in parts:
+        for tag in [t.strip() for t in p.split(",") if t.strip()]:
+            k = tag.lower()
+            if k not in seen:
+                seen.add(k)
+                out.append(tag)
+    return ", ".join(out)
 
 
 def known(text):

@@ -1,0 +1,48 @@
+{
+ "lora": "out_c2/lora_step5000.safetensors",
+ "mean_drift_sim": 0.7921,
+ "degenerate": 0,
+ "pass": true,
+ "rows": [
+  {
+   "prompt": "a photo of a tabby cat sitting on a wooden floor",
+   "drift_sim": 0.868,
+   "degenerate": false
+  },
+  {
+   "prompt": "a red sports car parked on a city street at night",
+   "drift_sim": 0.781,
+   "degenerate": false
+  },
+  {
+   "prompt": "a bowl of steaming ramen with an egg on top",
+   "drift_sim": 0.92,
+   "degenerate": false
+  },
+  {
+   "prompt": "a snowy mountain landscape under a blue sky",
+   "drift_sim": 0.499,
+   "degenerate": false
+  },
+  {
+   "prompt": "portrait of an old man with a grey beard, studio light",
+   "drift_sim": 0.824,
+   "degenerate": false
+  },
+  {
+   "prompt": "a futuristic robot standing in a laboratory",
+   "drift_sim": 0.738,
+   "degenerate": false
+  },
+  {
+   "prompt": "a quiet beach at sunset with palm trees",
+   "drift_sim": 0.769,
+   "degenerate": false
+  },
+  {
+   "prompt": "a plate of sushi on a black table, top view",
+   "drift_sim": 0.937,
+   "degenerate": false
+  }
+ ]
+}

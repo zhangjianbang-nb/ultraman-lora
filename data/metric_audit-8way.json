@@ -1,0 +1,71 @@
+{
+  "overall": 0.8828,
+  "trusted": [
+    "baltan",
+    "seven",
+    "gatanothor",
+    "redking",
+    "eleking",
+    "gomora",
+    "golza",
+    "tyrant"
+  ],
+  "rows": [
+    {
+      "id": "baltan",
+      "zh": "巴尔坦星人",
+      "n": 16,
+      "recall": 1.0,
+      "margin": 0.124
+    },
+    {
+      "id": "seven",
+      "zh": "赛文奥特曼",
+      "n": 16,
+      "recall": 1.0,
+      "margin": 0.164
+    },
+    {
+      "id": "gatanothor",
+      "zh": "加坦杰厄",
+      "n": 16,
+      "recall": 0.938,
+      "margin": 0.113
+    },
+    {
+      "id": "redking",
+      "zh": "雷德王",
+      "n": 16,
+      "recall": 0.875,
+      "margin": 0.097
+    },
+    {
+      "id": "eleking",
+      "zh": "艾雷王",
+      "n": 16,
+      "recall": 0.875,
+      "margin": 0.078
+    },
+    {
+      "id": "gomora",
+      "zh": "哥莫拉",
+      "n": 16,
+      "recall": 0.812,
+      "margin": 0.029
+    },
+    {
+      "id": "golza",
+      "zh": "哥尔赞",
+      "n": 16,
+      "recall": 0.812,
+      "margin": 0.051
+    },
+    {
+      "id": "tyrant",
+      "zh": "泰兰特",
+      "n": 16,
+      "recall": 0.75,
+      "margin": 0.034
+    }
+  ]
+}

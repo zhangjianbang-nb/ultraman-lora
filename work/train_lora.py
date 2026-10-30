@@ -10,7 +10,7 @@ Two phases:
 Phase A is skipped automatically if the cache already exists and matches the manifest.
 """
 import compat_shim  # noqa: F401  (must run before diffusers imports)
-import os, json, math, time, argparse, hashlib
+import os, json, math, time, argparse, hashlib, random
 import torch
 import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
@@ -32,6 +32,9 @@ ap.add_argument("--save-every", type=int, default=500)
 ap.add_argument("--log-every", type=int, default=10)
 ap.add_argument("--seed", type=int, default=42)
 ap.add_argument("--rebuild-cache", action="store_true")
+ap.add_argument("--caption-dropout", type=float, default=0.4,
+                help="probability of training on the SHORT caption (name only) instead of "
+                     "the full descriptive one, so the name alone becomes a trigger")
 ap.add_argument("--kinds", default="ultra,kaiju",
                 help="comma separated kinds to train on; empty = all")
 args = ap.parse_args()
@@ -53,7 +56,13 @@ manifest = json.load(open(args.manifest))
 if args.kinds:
     keep = set(args.kinds.split(","))
     manifest = [m for m in manifest if m["kind"] in keep]
-log("manifest: %d images, %d identities" % (len(manifest), len({m["identity"] for m in manifest})))
+def short_caption(m):
+    """Name-only caption: this is what makes a bare "tiga ultraman" prompt work."""
+    return "%s, tokusatsu, full body" % m["caption"].split(",")[0]
+
+
+log("manifest: %d images, %d identities, caption-dropout %.2f" %
+    (len(manifest), len({m["identity"] for m in manifest}), args.caption_dropout))
 
 # ---------- Phase A: precompute ----------
 if os.path.exists(args.cache) and not args.rebuild_cache:
@@ -96,10 +105,22 @@ else:
             o2 = te2(t2.input_ids, output_hidden_states=True)
             emb = torch.cat([e1, o2.hidden_states[-2]], dim=-1).to(torch.float16)
             pooled = o2.text_embeds.to(torch.float16)
+            short = short_caption(m)
+            s1 = tok1(short, padding="max_length", max_length=tok1.model_max_length,
+                      truncation=True, return_tensors="pt").to(DEV)
+            s2 = tok2(short, padding="max_length", max_length=tok2.model_max_length,
+                      truncation=True, return_tensors="pt").to(DEV)
+            se1 = te1(s1.input_ids, output_hidden_states=True).hidden_states[-2]
+            so2 = te2(s2.input_ids, output_hidden_states=True)
+            emb_s = torch.cat([se1, so2.hidden_states[-2]], dim=-1).to(torch.float16)
+            pooled_s = so2.text_embeds.to(torch.float16)
         cache.append({"latent": lat[0].to(DT).cpu(),
                       "emb": emb[0].to(DT).cpu(),
                       "pooled": pooled[0].to(DT).cpu(),
-                      "caption": m["caption"], "identity": m["identity"]})
+                      "emb_short": emb_s[0].to(DT).cpu(),
+                      "pooled_short": pooled_s[0].to(DT).cpu(),
+                      "caption": m["caption"], "short": short,
+                      "identity": m["identity"]})
         if (i + 1) % 50 == 0:
             log("  encoded %d/%d  (%.1fs)" % (i + 1, len(manifest), time.time() - t0))
     torch.save(cache, args.cache)
@@ -142,8 +163,16 @@ add_time_ids = torch.tensor([args.res, args.res, 0, 0, args.res, args.res],
 
 def get_batch(idx):
     lat = torch.stack([cache[j]["latent"] for j in idx]).to(DEV)
-    emb = torch.stack([cache[j]["emb"] for j in idx]).to(DEV)
-    pooled = torch.stack([cache[j]["pooled"] for j in idx]).to(DEV)
+    emb_l, pool_l = [], []
+    for j in idx:
+        if random.random() < args.caption_dropout:
+            emb_l.append(cache[j]["emb_short"])
+            pool_l.append(cache[j]["pooled_short"])
+        else:
+            emb_l.append(cache[j]["emb"])
+            pool_l.append(cache[j]["pooled"])
+    emb = torch.stack(emb_l).to(DEV)
+    pooled = torch.stack(pool_l).to(DEV)
     tids = add_time_ids.expand(len(idx), -1)
     return lat, emb, pooled, tids
 

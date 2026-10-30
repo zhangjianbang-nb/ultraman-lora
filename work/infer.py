@@ -9,6 +9,7 @@ Chinese prompts are rewritten into the English tag space the LoRA was trained on
     python3 infer.py --lora ... --grid --outdir grids      # one image per identity
     python3 infer.py --lora ... --prompt 迪迦 --n 4        # four candidates
 """
+import compat_shim  # noqa: F401  (must run before diffusers imports)
 import os, json, argparse
 import torch
 from PIL import Image
@@ -20,7 +21,12 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--model", default=os.path.expanduser("~/ultraman/models/sdxl-base-1.0"))
 ap.add_argument("--lora", default=None)
 ap.add_argument("--rank", type=int, default=32)
+ap.add_argument("--lora-scale", type=float, default=1.0,
+                help="LoRA strength; lower it if the base model's general ability drifts")
 ap.add_argument("--prompt", default=None)
+ap.add_argument("--negative", default=None, help="override the default negative prompt")
+ap.add_argument("--style", default="desc", choices=["desc", "name"],
+                help="desc = name + canonical appearance (better pictures); name = pure binding test")
 ap.add_argument("--raw", action="store_true", help="do not rewrite Chinese names")
 ap.add_argument("--out", default="out.png")
 ap.add_argument("--outdir", default="grids")
@@ -34,23 +40,24 @@ ap.add_argument("--size", type=int, default=1024)
 args = ap.parse_args()
 
 from diffusers import StableDiffusionXLPipeline, UNet2DConditionModel
-from lora_util import load_into
+from lora_util import load_into, upcast_vae
 
 pipe = StableDiffusionXLPipeline.from_pretrained(
     args.model, torch_dtype=torch.float16, variant="fp16", use_safetensors=True).to("cuda")
-pipe.vae.to(dtype=torch.float32)  # SDXL VAE overflows in fp16
+upcast_vae(pipe)  # SDXL VAE overflows in fp16
 if args.lora:
     unet = UNet2DConditionModel.from_pretrained(
         args.model, subfolder="unet", torch_dtype=torch.float16, variant="fp16",
         use_safetensors=True)
-    unet, missing, unexpected = load_into(unet, args.lora, args.rank, args.rank)
+    unet, missing, unexpected = load_into(unet, args.lora, args.rank, args.rank, args.lora_scale)
     pipe.unet = unet.to("cuda")
     print("lora loaded: missing=%d unexpected=%d" % (len(missing), len(unexpected)))
 
 
 def render(prompt, out_path, seed=None):
     g = torch.Generator(device="cuda").manual_seed(args.seed if seed is None else seed)
-    im = pipe(prompt=prompt, num_inference_steps=args.steps,
+    im = pipe(prompt=prompt, negative_prompt=(args.negative or names.NEGATIVE),
+              num_inference_steps=args.steps,
               guidance_scale=args.cfg, width=args.size, height=args.size,
               generator=g).images[0]
     im.save(out_path)
@@ -68,7 +75,7 @@ if args.grid:
 else:
     if not args.prompt:
         raise SystemExit("need --prompt or --grid")
-    prompt = args.prompt if args.raw else names.normalize(args.prompt)
+    prompt = args.prompt if args.raw else names.normalize(args.prompt, style=args.style)
     print("prompt:", prompt)
     base, ext = os.path.splitext(args.out)
     for k in range(args.n):

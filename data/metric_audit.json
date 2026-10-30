@@ -1,0 +1,253 @@
+{
+  "overall": 0.4981,
+  "trusted": [
+    "baltan",
+    "redking",
+    "gomora",
+    "gatanothor",
+    "golza",
+    "seven",
+    "eleking",
+    "tyrant"
+  ],
+  "rows": [
+    {
+      "id": "baltan",
+      "zh": "巴尔坦星人",
+      "n": 16,
+      "recall": 0.875,
+      "margin": 0.066
+    },
+    {
+      "id": "redking",
+      "zh": "雷德王",
+      "n": 16,
+      "recall": 0.875,
+      "margin": 0.095
+    },
+    {
+      "id": "gomora",
+      "zh": "哥莫拉",
+      "n": 16,
+      "recall": 0.812,
+      "margin": 0.029
+    },
+    {
+      "id": "gatanothor",
+      "zh": "加坦杰厄",
+      "n": 16,
+      "recall": 0.812,
+      "margin": 0.078
+    },
+    {
+      "id": "golza",
+      "zh": "哥尔赞",
+      "n": 16,
+      "recall": 0.812,
+      "margin": 0.051
+    },
+    {
+      "id": "seven",
+      "zh": "赛文奥特曼",
+      "n": 16,
+      "recall": 0.75,
+      "margin": 0.023
+    },
+    {
+      "id": "eleking",
+      "zh": "艾雷王",
+      "n": 16,
+      "recall": 0.75,
+      "margin": 0.067
+    },
+    {
+      "id": "tyrant",
+      "zh": "泰兰特",
+      "n": 16,
+      "recall": 0.75,
+      "margin": 0.034
+    },
+    {
+      "id": "zetton",
+      "zh": "杰顿",
+      "n": 16,
+      "recall": 0.688,
+      "margin": 0.019
+    },
+    {
+      "id": "mephilas",
+      "zh": "美菲拉斯星人",
+      "n": 16,
+      "recall": 0.688,
+      "margin": 0.043
+    },
+    {
+      "id": "ultraman",
+      "zh": "初代奥特曼",
+      "n": 16,
+      "recall": 0.562,
+      "margin": -0.0
+    },
+    {
+      "id": "taro",
+      "zh": "泰罗奥特曼",
+      "n": 16,
+      "recall": 0.562,
+      "margin": 0.001
+    },
+    {
+      "id": "leo",
+      "zh": "雷欧奥特曼",
+      "n": 16,
+      "recall": 0.562,
+      "margin": 0.003
+    },
+    {
+      "id": "cosmos",
+      "zh": "高斯奥特曼",
+      "n": 16,
+      "recall": 0.562,
+      "margin": -0.001
+    },
+    {
+      "id": "nexus",
+      "zh": "奈克瑟斯奥特曼",
+      "n": 16,
+      "recall": 0.562,
+      "margin": 0.0
+    },
+    {
+      "id": "orb",
+      "zh": "欧布奥特曼",
+      "n": 16,
+      "recall": 0.5,
+      "margin": -0.008
+    },
+    {
+      "id": "arc",
+      "zh": "亚刻奥特曼",
+      "n": 16,
+      "recall": 0.5,
+      "margin": -0.011
+    },
+    {
+      "id": "empera",
+      "zh": "安培拉星人",
+      "n": 16,
+      "recall": 0.5,
+      "margin": -0.004
+    },
+    {
+      "id": "tiga",
+      "zh": "迪迦奥特曼",
+      "n": 16,
+      "recall": 0.438,
+      "margin": -0.005
+    },
+    {
+      "id": "zero",
+      "zh": "赛罗奥特曼",
+      "n": 16,
+      "recall": 0.438,
+      "margin": -0.004
+    },
+    {
+      "id": "jack",
+      "zh": "杰克奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.009
+    },
+    {
+      "id": "eighty",
+      "zh": "爱迪奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.019
+    },
+    {
+      "id": "gaia",
+      "zh": "盖亚奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.011
+    },
+    {
+      "id": "agul",
+      "zh": "阿古茹奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.027
+    },
+    {
+      "id": "hikari",
+      "zh": "希卡利奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.01
+    },
+    {
+      "id": "ginga",
+      "zh": "银河奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.021
+    },
+    {
+      "id": "geed",
+      "zh": "捷德奥特曼",
+      "n": 16,
+      "recall": 0.375,
+      "margin": -0.022
+    },
+    {
+      "id": "ace",
+      "zh": "艾斯奥特曼",
+      "n": 16,
+      "recall": 0.25,
+      "margin": -0.022
+    },
+    {
+      "id": "dyna",
+      "zh": "戴拿奥特曼",
+      "n": 16,
+      "recall": 0.25,
+      "margin": -0.013
+    },
+    {
+      "id": "blazar",
+      "zh": "布莱泽奥特曼",
+      "n": 16,
+      "recall": 0.25,
+      "margin": -0.015
+    },
+    {
+      "id": "mebius",
+      "zh": "梦比优斯奥特曼",
+      "n": 16,
+      "recall": 0.188,
+      "margin": -0.026
+    },
+    {
+      "id": "z",
+      "zh": "泽塔奥特曼",
+      "n": 16,
+      "recall": 0.188,
+      "margin": -0.01
+    },
+    {
+      "id": "trigger",
+      "zh": "特利迦奥特曼",
+      "n": 16,
+      "recall": 0.188,
+      "margin": -0.012
+    },
+    {
+      "id": "decker",
+      "zh": "德凯奥特曼",
+      "n": 16,
+      "recall": 0.0,
+      "margin": -0.029
+    }
+  ]
+}

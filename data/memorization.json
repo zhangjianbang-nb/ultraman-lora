@@ -1,0 +1,211 @@
+{
+  "n": 34,
+  "memorised": 0,
+  "mean_corr": 0.2525,
+  "rows": [
+    {
+      "id": "geed",
+      "zh": "捷德奥特曼",
+      "corr": 0.439,
+      "match": "geed_25.jpg"
+    },
+    {
+      "id": "redking",
+      "zh": "雷德王",
+      "corr": 0.386,
+      "match": "redking_28.jpg"
+    },
+    {
+      "id": "cosmos",
+      "zh": "高斯奥特曼",
+      "corr": 0.385,
+      "match": "cosmos_10.jpg"
+    },
+    {
+      "id": "mebius",
+      "zh": "梦比优斯奥特曼",
+      "corr": 0.385,
+      "match": "mebius_16.jpg"
+    },
+    {
+      "id": "tyrant",
+      "zh": "泰兰特",
+      "corr": 0.344,
+      "match": "tyrant_18.jpg"
+    },
+    {
+      "id": "eighty",
+      "zh": "爱迪奥特曼",
+      "corr": 0.342,
+      "match": "eighty_28.jpg"
+    },
+    {
+      "id": "agul",
+      "zh": "阿古茹奥特曼",
+      "corr": 0.338,
+      "match": "agul_12.jpg"
+    },
+    {
+      "id": "ginga",
+      "zh": "银河奥特曼",
+      "corr": 0.318,
+      "match": "ginga_03.jpg"
+    },
+    {
+      "id": "decker",
+      "zh": "德凯奥特曼",
+      "corr": 0.314,
+      "match": "decker_28.jpg"
+    },
+    {
+      "id": "hikari",
+      "zh": "希卡利奥特曼",
+      "corr": 0.3,
+      "match": "hikari_28.jpg"
+    },
+    {
+      "id": "nexus",
+      "zh": "奈克瑟斯奥特曼",
+      "corr": 0.293,
+      "match": "nexus_04.jpg"
+    },
+    {
+      "id": "z",
+      "zh": "泽塔奥特曼",
+      "corr": 0.288,
+      "match": "z_29.jpg"
+    },
+    {
+      "id": "zetton",
+      "zh": "杰顿",
+      "corr": 0.282,
+      "match": "zetton_21.jpg"
+    },
+    {
+      "id": "gomora",
+      "zh": "哥莫拉",
+      "corr": 0.271,
+      "match": "gomora_07.jpg"
+    },
+    {
+      "id": "eleking",
+      "zh": "艾雷王",
+      "corr": 0.27,
+      "match": "eleking_26.jpg"
+    },
+    {
+      "id": "orb",
+      "zh": "欧布奥特曼",
+      "corr": 0.258,
+      "match": "orb_21.jpg"
+    },
+    {
+      "id": "arc",
+      "zh": "亚刻奥特曼",
+      "corr": 0.253,
+      "match": "arc_05.jpg"
+    },
+    {
+      "id": "taro",
+      "zh": "泰罗奥特曼",
+      "corr": 0.242,
+      "match": "taro_19.jpg"
+    },
+    {
+      "id": "baltan",
+      "zh": "巴尔坦星人",
+      "corr": 0.241,
+      "match": "baltan_31.jpg"
+    },
+    {
+      "id": "blazar",
+      "zh": "布莱泽奥特曼",
+      "corr": 0.241,
+      "match": "blazar_12.jpg"
+    },
+    {
+      "id": "gatanothor",
+      "zh": "加坦杰厄",
+      "corr": 0.237,
+      "match": "gatanothor_22.jpg"
+    },
+    {
+      "id": "seven",
+      "zh": "赛文奥特曼",
+      "corr": 0.233,
+      "match": "seven_20.jpg"
+    },
+    {
+      "id": "empera",
+      "zh": "安培拉星人",
+      "corr": 0.23,
+      "match": "empera_16.jpg"
+    },
+    {
+      "id": "dyna",
+      "zh": "戴拿奥特曼",
+      "corr": 0.217,
+      "match": "dyna_03.jpg"
+    },
+    {
+      "id": "gaia",
+      "zh": "盖亚奥特曼",
+      "corr": 0.212,
+      "match": "gaia_19.jpg"
+    },
+    {
+      "id": "ultraman",
+      "zh": "初代奥特曼",
+      "corr": 0.208,
+      "match": "ultraman_16.jpg"
+    },
+    {
+      "id": "leo",
+      "zh": "雷欧奥特曼",
+      "corr": 0.16,
+      "match": "leo_21.jpg"
+    },
+    {
+      "id": "tiga",
+      "zh": "迪迦奥特曼",
+      "corr": 0.157,
+      "match": "tiga_20.jpg"
+    },
+    {
+      "id": "mephilas",
+      "zh": "美菲拉斯星人",
+      "corr": 0.15,
+      "match": "mephilas_18.jpg"
+    },
+    {
+      "id": "ace",
+      "zh": "艾斯奥特曼",
+      "corr": 0.144,
+      "match": "ace_00.jpg"
+    },
+    {
+      "id": "trigger",
+      "zh": "特利迦奥特曼",
+      "corr": 0.141,
+      "match": "trigger_05.jpg"
+    },
+    {
+      "id": "zero",
+      "zh": "赛罗奥特曼",
+      "corr": 0.139,
+      "match": "zero_30.jpg"
+    },
+    {
+      "id": "jack",
+      "zh": "杰克奥特曼",
+      "corr": 0.095,
+      "match": "jack_01.jpg"
+    },
+    {
+      "id": "golza",
+      "zh": "哥尔赞",
+      "corr": 0.072,
+      "match": "golza_14.jpg"
+    }
+  ]
+}

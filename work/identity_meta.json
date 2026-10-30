@@ -1,48 +1,278 @@
 {
- "tiga": {"en": "tiga ultraman", "zh": "迪迦奥特曼", "kind": "ultra", "desc": "giant silver and purple hero with a glowing chest crystal, tokusatsu suit"},
- "zero": {"en": "ultraman zero", "zh": "赛罗奥特曼", "kind": "ultra", "desc": "blue and silver hero with a red horned head crest, tokusatsu suit"},
- "ultraman": {"en": "original ultraman", "zh": "初代奥特曼", "kind": "ultra", "desc": "silver and red giant hero with a fin crest, tokusatsu suit"},
- "seven": {"en": "ultraseven", "zh": "赛文奥特曼", "kind": "ultra", "desc": "red and silver hero with a blade crest on the head, tokusatsu suit"},
- "jack": {"en": "ultraman jack", "zh": "杰克奥特曼", "kind": "ultra", "desc": "silver and red giant hero, tokusatsu suit"},
- "ace": {"en": "ultraman ace", "zh": "艾斯奥特曼", "kind": "ultra", "desc": "silver and red hero with vertical head fin, tokusatsu suit"},
- "taro": {"en": "ultraman taro", "zh": "泰罗奥特曼", "kind": "ultra", "desc": "silver and red hero with golden horn crest, tokusatsu suit"},
- "leo": {"en": "ultraman leo", "zh": "雷欧奥特曼", "kind": "ultra", "desc": "red and silver lion-themed hero, tokusatsu suit"},
- "eighty": {"en": "ultraman eighty", "zh": "爱迪奥特曼", "kind": "ultra", "desc": "silver and red hero with a vertical head crest, tokusatsu suit"},
- "dyna": {"en": "ultraman dyna", "zh": "戴拿奥特曼", "kind": "ultra", "desc": "blue silver and red hero, tokusatsu suit"},
- "gaia": {"en": "ultraman gaia", "zh": "盖亚奥特曼", "kind": "ultra", "desc": "red and silver hero with a golden chest crest, tokusatsu suit"},
- "agul": {"en": "ultraman agul", "zh": "阿古茹奥特曼", "kind": "ultra", "desc": "blue and black hero with a golden chest emblem, tokusatsu suit"},
- "cosmos": {"en": "ultraman cosmos", "zh": "高斯奥特曼", "kind": "ultra", "desc": "blue and silver gentle hero, tokusatsu suit"},
- "nexus": {"en": "ultraman nexus", "zh": "奈克瑟斯奥特曼", "kind": "ultra", "desc": "silver and dark blue hero with layered armor, tokusatsu suit"},
- "mebius": {"en": "ultraman mebius", "zh": "梦比优斯奥特曼", "kind": "ultra", "desc": "red and silver hero with golden head crest, tokusatsu suit"},
- "hikari": {"en": "ultraman hikari", "zh": "希卡利奥特曼", "kind": "ultra", "desc": "blue and silver knight hero, tokusatsu suit"},
- "ginga": {"en": "ultraman ginga", "zh": "银河奥特曼", "kind": "ultra", "desc": "silver and blue crystal hero, tokusatsu suit"},
- "orb": {"en": "ultraman orb", "zh": "欧布奥特曼", "kind": "ultra", "desc": "red silver and black hero with a circular chest ring, tokusatsu suit"},
- "geed": {"en": "ultraman geed", "zh": "捷德奥特曼", "kind": "ultra", "desc": "silver red and black hero with sharp armor, tokusatsu suit"},
- "z": {"en": "ultraman z", "zh": "泽塔奥特曼", "kind": "ultra", "desc": "silver blue and red hero with a Z chest mark, tokusatsu suit"},
- "trigger": {"en": "ultraman trigger", "zh": "特利迦奥特曼", "kind": "ultra", "desc": "silver and gold hero with a golden head crest, tokusatsu suit"},
- "decker": {"en": "ultraman decker", "zh": "德凯奥特曼", "kind": "ultra", "desc": "silver red and blue hero with a diamond chest crest, tokusatsu suit"},
- "blazar": {"en": "ultraman blazar", "zh": "布莱泽奥特曼", "kind": "ultra", "desc": "silver and dark blue hero with orange crystal spikes, tokusatsu suit"},
- "arc": {"en": "ultraman arc", "zh": "亚刻奥特曼", "kind": "ultra", "desc": "silver and red hero with a blue glowing head crest, tokusatsu suit"},
- "gomora": {"en": "gomora", "zh": "哥莫拉", "kind": "kaiju", "desc": "ancient horned dinosaur monster with a nasal horn, tokusatsu monster"},
- "zetton": {"en": "zetton", "zh": "杰顿", "kind": "kaiju", "desc": "black and orange insectoid space dinosaur monster, tokusatsu monster"},
- "baltan": {"en": "alien baltan", "zh": "巴尔坦星人", "kind": "kaiju", "desc": "grey insectoid alien with huge pincer claws, tokusatsu alien"},
- "redking": {"en": "red king", "zh": "雷德王", "kind": "kaiju", "desc": "red brown muscular horned monster, tokusatsu monster"},
- "eleking": {"en": "eleking", "zh": "艾雷王", "kind": "kaiju", "desc": "blue and yellow striped electric monster with whip tail, tokusatsu monster"},
- "mephilas": {"en": "alien mephilas", "zh": "美菲拉斯星人", "kind": "kaiju", "desc": "grey humanoid alien in a black cape, tokusatsu alien"},
- "tyrant": {"en": "tyrant", "zh": "泰兰特", "kind": "kaiju", "desc": "huge composite monster with horns and a mace hand, tokusatsu monster"},
- "gatanothor": {"en": "gatanothor", "zh": "加坦杰厄", "kind": "kaiju", "desc": "dark tentacled ancient god monster, tokusatsu monster"},
- "golza": {"en": "golza", "zh": "哥尔赞", "kind": "kaiju", "desc": "brown armored ancient monster with a crest, tokusatsu monster"},
- "empera": {"en": "emperor alien", "zh": "安培拉星人", "kind": "kaiju", "desc": "black armored alien emperor with a cloak, tokusatsu alien"},
- "nagano": {"en": "Hiroshi Nagano", "zh": "长野博", "kind": "actor", "desc": "japanese male actor portrait, real photo, short black hair"},
- "tsuruno": {"en": "Tsuyoshi Tsuruno", "zh": "鹤野刚士", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "yoshioka": {"en": "Takeshi Yoshioka", "zh": "吉冈毅志", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "igarashi": {"en": "Shunji Igarashi", "zh": "五十岚隼士", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "ishiguro": {"en": "Hideo Ishiguro", "zh": "石黑英雄", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "hamada": {"en": "Tatsuomi Hamada", "zh": "滨田龙臣", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "hirano": {"en": "Kohshu Hirano", "zh": "平野宏周", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "terasaka": {"en": "Raiga Terasaka", "zh": "寺坂赖我", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "warabino": {"en": "Tomoya Warabino", "zh": "蕨野友也", "kind": "actor", "desc": "japanese male actor portrait, real photo"},
- "kurobe": {"en": "Susumu Kurobe", "zh": "黑部进", "kind": "actor", "desc": "japanese male actor portrait, real photo, older man"},
- "moritsugu": {"en": "Koji Moritsugu", "zh": "森次晃嗣", "kind": "actor", "desc": "japanese male actor portrait, real photo, older man"},
- "nishina": {"en": "Katsuki Nishina", "zh": "仁科克基", "kind": "actor", "desc": "japanese male actor portrait, real photo"}
+ "tiga": {
+  "en": "tiga ultraman",
+  "zh": "迪迦奥特曼",
+  "kind": "ultra",
+  "desc": "silver body with red and purple accents, a golden chest timer and a crest fin on the head, tokusatsu suit"
+ },
+ "zero": {
+  "en": "ultraman zero",
+  "zh": "赛罗奥特曼",
+  "kind": "ultra",
+  "desc": "blue and silver body with red accents, two blade horns on the head and a colorful chest timer, tokusatsu suit"
+ },
+ "ultraman": {
+  "en": "original ultraman",
+  "zh": "初代奥特曼",
+  "kind": "ultra",
+  "desc": "silver body with red stripes, a fin crest on the head and a round chest timer, tokusatsu suit"
+ },
+ "seven": {
+  "en": "ultraseven",
+  "zh": "赛文奥特曼",
+  "kind": "ultra",
+  "desc": "red body with silver accents, a blade crest on the head and a chest timer, tokusatsu suit"
+ },
+ "jack": {
+  "en": "ultraman jack",
+  "zh": "杰克奥特曼",
+  "kind": "ultra",
+  "desc": "silver body with red stripes, a fin crest and a metal bracelet on the right wrist, tokusatsu suit"
+ },
+ "ace": {
+  "en": "ultraman ace",
+  "zh": "艾斯奥特曼",
+  "kind": "ultra",
+  "desc": "silver body with red and blue accents, a vertical fin on the head and a round chest timer, tokusatsu suit"
+ },
+ "taro": {
+  "en": "ultraman taro",
+  "zh": "泰罗奥特曼",
+  "kind": "ultra",
+  "desc": "silver and red body with golden horns on the head and a chest timer, tokusatsu suit"
+ },
+ "leo": {
+  "en": "ultraman leo",
+  "zh": "雷欧奥特曼",
+  "kind": "ultra",
+  "desc": "red and silver body with a lion-like head crest and a round chest timer, tokusatsu suit"
+ },
+ "eighty": {
+  "en": "ultraman eighty",
+  "zh": "爱迪奥特曼",
+  "kind": "ultra",
+  "desc": "silver and red body with a vertical fin crest and a chest timer, tokusatsu suit"
+ },
+ "dyna": {
+  "en": "ultraman dyna",
+  "zh": "戴拿奥特曼",
+  "kind": "ultra",
+  "desc": "blue and silver body with red accents, an asymmetric head crest and a chest timer, tokusatsu suit"
+ },
+ "gaia": {
+  "en": "ultraman gaia",
+  "zh": "盖亚奥特曼",
+  "kind": "ultra",
+  "desc": "red, silver and blue body with a V-shaped chest and a head crest, tokusatsu suit"
+ },
+ "agul": {
+  "en": "ultraman agul",
+  "zh": "阿古茹奥特曼",
+  "kind": "ultra",
+  "desc": "blue and silver body with a pointed head crest and a chest timer, tokusatsu suit"
+ },
+ "cosmos": {
+  "en": "ultraman cosmos",
+  "zh": "高斯奥特曼",
+  "kind": "ultra",
+  "desc": "silver and blue body with a moon-shaped head crest, tokusatsu suit"
+ },
+ "nexus": {
+  "en": "ultraman nexus",
+  "zh": "奈克瑟斯奥特曼",
+  "kind": "ultra",
+  "desc": "silver and dark grey body with a winged head crest and a chest timer, tokusatsu suit"
+ },
+ "mebius": {
+  "en": "ultraman mebius",
+  "zh": "梦比优斯奥特曼",
+  "kind": "ultra",
+  "desc": "silver and red body with a golden head crest and a chest timer, tokusatsu suit"
+ },
+ "hikari": {
+  "en": "ultraman hikari",
+  "zh": "希卡利奥特曼",
+  "kind": "ultra",
+  "desc": "silver and blue body with a knight-like head crest and a chest timer, tokusatsu suit"
+ },
+ "ginga": {
+  "en": "ultraman ginga",
+  "zh": "银河奥特曼",
+  "kind": "ultra",
+  "desc": "silver and blue body with crystal studs on the head and chest, tokusatsu suit"
+ },
+ "orb": {
+  "en": "ultraman orb",
+  "zh": "欧布奥特曼",
+  "kind": "ultra",
+  "desc": "red and silver body with a ring-shaped head crest and a chest timer, tokusatsu suit"
+ },
+ "geed": {
+  "en": "ultraman geed",
+  "zh": "捷德奥特曼",
+  "kind": "ultra",
+  "desc": "silver and red body with a horned head crest, tokusatsu suit"
+ },
+ "z": {
+  "en": "ultraman z",
+  "zh": "泽塔奥特曼",
+  "kind": "ultra",
+  "desc": "silver blue and red body with a Z-shaped chest mark and a head crest, tokusatsu suit"
+ },
+ "trigger": {
+  "en": "ultraman trigger",
+  "zh": "特利迦奥特曼",
+  "kind": "ultra",
+  "desc": "silver and red body with golden accents and a crest on the head, tokusatsu suit"
+ },
+ "decker": {
+  "en": "ultraman decker",
+  "zh": "德凯奥特曼",
+  "kind": "ultra",
+  "desc": "silver and blue body with red accents and a fin crest, tokusatsu suit"
+ },
+ "blazar": {
+  "en": "ultraman blazar",
+  "zh": "布莱泽奥特曼",
+  "kind": "ultra",
+  "desc": "silver and blue body with a red head crest and a chest timer, tokusatsu suit"
+ },
+ "arc": {
+  "en": "ultraman arc",
+  "zh": "亚刻奥特曼",
+  "kind": "ultra",
+  "desc": "silver and red body with a horned head crest, tokusatsu suit"
+ },
+ "gomora": {
+  "en": "gomora",
+  "zh": "哥莫拉",
+  "kind": "kaiju",
+  "desc": "brown and grey horned dinosaur monster with a nasal horn and a thick tail, tokusatsu monster"
+ },
+ "zetton": {
+  "en": "zetton",
+  "zh": "杰顿",
+  "kind": "kaiju",
+  "desc": "black insectoid space dinosaur monster with orange glowing orbs on the chest and face, tokusatsu monster"
+ },
+ "baltan": {
+  "en": "alien baltan",
+  "zh": "巴尔坦星人",
+  "kind": "kaiju",
+  "desc": "grey insectoid alien with huge pincer claws and glowing eyes, tokusatsu alien"
+ },
+ "redking": {
+  "en": "red king",
+  "zh": "雷德王",
+  "kind": "kaiju",
+  "desc": "red brown muscular horned monster with a rocky hide, tokusatsu monster"
+ },
+ "eleking": {
+  "en": "eleking",
+  "zh": "艾雷王",
+  "kind": "kaiju",
+  "desc": "blue and yellow striped electric monster with a whip tail, tokusatsu monster"
+ },
+ "mephilas": {
+  "en": "alien mephilas",
+  "zh": "美菲拉斯星人",
+  "kind": "kaiju",
+  "desc": "grey humanoid alien in a black cape, tokusatsu alien"
+ },
+ "tyrant": {
+  "en": "tyrant",
+  "zh": "泰兰特",
+  "kind": "kaiju",
+  "desc": "huge composite monster with horns and a mace hand, tokusatsu monster"
+ },
+ "gatanothor": {
+  "en": "gatanothor",
+  "zh": "加坦杰厄",
+  "kind": "kaiju",
+  "desc": "dark tentacled ancient god monster, tokusatsu monster"
+ },
+ "golza": {
+  "en": "golza",
+  "zh": "哥尔赞",
+  "kind": "kaiju",
+  "desc": "brown armored ancient monster with a crest, tokusatsu monster"
+ },
+ "empera": {
+  "en": "emperor alien",
+  "zh": "安培拉星人",
+  "kind": "kaiju",
+  "desc": "black armored alien emperor with a cloak, tokusatsu alien"
+ },
+ "nagano": {
+  "en": "Hiroshi Nagano",
+  "zh": "长野博",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo, short black hair"
+ },
+ "tsuruno": {
+  "en": "Tsuyoshi Tsuruno",
+  "zh": "鹤野刚士",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "yoshioka": {
+  "en": "Takeshi Yoshioka",
+  "zh": "吉冈毅志",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "igarashi": {
+  "en": "Shunji Igarashi",
+  "zh": "五十岚隼士",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "ishiguro": {
+  "en": "Hideo Ishiguro",
+  "zh": "石黑英雄",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "hamada": {
+  "en": "Tatsuomi Hamada",
+  "zh": "滨田龙臣",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "hirano": {
+  "en": "Kohshu Hirano",
+  "zh": "平野宏周",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "terasaka": {
+  "en": "Raiga Terasaka",
+  "zh": "寺坂赖我",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "warabino": {
+  "en": "Tomoya Warabino",
+  "zh": "蕨野友也",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ },
+ "kurobe": {
+  "en": "Susumu Kurobe",
+  "zh": "黑部进",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo, older man"
+ },
+ "moritsugu": {
+  "en": "Koji Moritsugu",
+  "zh": "森次晃嗣",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo, older man"
+ },
+ "nishina": {
+  "en": "Katsuki Nishina",
+  "zh": "仁科克基",
+  "kind": "actor",
+  "desc": "japanese male actor portrait, real photo"
+ }
 }

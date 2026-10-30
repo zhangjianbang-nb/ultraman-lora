@@ -1,11 +1,19 @@
 # raw scraped images (~670 MB) and per-identity clean copies stay local
 data/raw/
 data/clean/
+data/clean2/
+data/cache2.pt
+data/final/
+data/review/
 data/cache.pt
 data/eval/
+data/evalgen/
+data/nameinf/
+data/compare/
 data/capcheck/
 out/
 logs/
 sheet_*.jpg
+dataset_report.md
 __pycache__/
 *.pyc

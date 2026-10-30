@@ -9,6 +9,8 @@ concept keeps these two close; one that wrecked the UNet makes them diverge.
 
 Pass condition: mean drift similarity >= 0.75 and no degenerate (flat/black) images.
 """
+
+import compat_shim  # noqa: F401  (must run before diffusers imports)
 import os, json, argparse
 import torch
 import numpy as np
@@ -19,6 +21,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--model", default=os.path.expanduser("~/ultraman/models/sdxl-base-1.0"))
 ap.add_argument("--lora", default=None)
 ap.add_argument("--rank", type=int, default=32)
+ap.add_argument("--lora-scale", type=float, default=1.0,
+                help="LoRA strength; lower it if the base model's general ability drifts")
 ap.add_argument("--steps", type=int, default=25)
 ap.add_argument("--cfg", type=float, default=6.5)
 ap.add_argument("--seed", type=int, default=2026)
@@ -61,15 +65,15 @@ def degenerate(im):
 
 def make_pipe(lora=None):
     from diffusers import StableDiffusionXLPipeline, UNet2DConditionModel
-    from lora_util import load_into
+    from lora_util import load_into, upcast_vae
     pipe = StableDiffusionXLPipeline.from_pretrained(
         args.model, torch_dtype=torch.float16, variant="fp16", use_safetensors=True).to("cuda")
-    pipe.vae.to(dtype=torch.float32)
+    upcast_vae(pipe)
     if lora:
         unet = UNet2DConditionModel.from_pretrained(
             args.model, subfolder="unet", torch_dtype=torch.float16, variant="fp16",
             use_safetensors=True)
-        unet, missing, unexpected = load_into(unet, lora, args.rank, args.rank)
+        unet, missing, unexpected = load_into(unet, lora, args.rank, args.rank, args.lora_scale)
         pipe.unet = unet.to("cuda")
         print("lora loaded (missing %d / unexpected %d)" % (len(missing), len(unexpected)))
     return pipe

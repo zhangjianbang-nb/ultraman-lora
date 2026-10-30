@@ -22,6 +22,8 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--model", default=os.path.expanduser("~/ultraman/models/sdxl-base-1.0"))
 ap.add_argument("--lora", default=None)
 ap.add_argument("--rank", type=int, default=32)
+ap.add_argument("--lora-scale", type=float, default=1.0,
+                help="LoRA strength; lower it if the base model's general ability drifts")
 ap.add_argument("--n", type=int, default=2, help="images per identity")
 ap.add_argument("--tag", default=None)
 ap.add_argument("--ids", default=None)
@@ -29,12 +31,14 @@ ap.add_argument("--steps", type=int, default=30)
 ap.add_argument("--cfg", type=float, default=7.0)
 ap.add_argument("--seed", type=int, default=777)
 ap.add_argument("--size", type=int, default=1024)
-ap.add_argument("--style", default="full", choices=["full", "zh", "zh_only"])
+ap.add_argument("--style", default="full", choices=["full", "name", "zh", "zh_only"])
 args = ap.parse_args()
 
 meta = json.load(open(os.path.join(ROOT, "work", "identity_meta.json")))
 CLEAN = os.path.join(ROOT, "data", "clean")
-ids = [i for i in meta if os.path.isdir(os.path.join(CLEAN, i))]
+# only identities the LoRA actually saw (actors are archived, not trained)
+TRAINED = {"ultra", "kaiju"}
+ids = [i for i in meta if meta[i]["kind"] in TRAINED and os.path.isdir(os.path.join(CLEAN, i))]
 if args.ids:
     ids = [x.strip() for x in args.ids.split(",")]
 tag = args.tag or ("lora" if args.lora else "base")
@@ -78,18 +82,18 @@ cent_mat = torch.cat([cent[i] for i in ids])
 print("reference centroids built for %d identities" % len(ids))
 
 # ---------- generate ----------
+from lora_util import load_into, upcast_vae
 from diffusers import StableDiffusionXLPipeline
 pipe = StableDiffusionXLPipeline.from_pretrained(
     args.model, torch_dtype=torch.float16, variant="fp16", use_safetensors=True).to("cuda")
 # SDXL's VAE overflows in fp16; decode in fp32 so no image comes out black/NaN
-pipe.vae.to(dtype=torch.float32)
+upcast_vae(pipe)
 if args.lora:
     from diffusers import UNet2DConditionModel
-    from lora_util import load_into
     unet = UNet2DConditionModel.from_pretrained(
         args.model, subfolder="unet", torch_dtype=torch.float16, variant="fp16",
         use_safetensors=True)
-    unet, missing, unexpected = load_into(unet, args.lora, args.rank, args.rank)
+    unet, missing, unexpected = load_into(unet, args.lora, args.rank, args.rank, args.lora_scale)
     pipe.unet = unet.to("cuda")
     print("lora loaded (missing %d / unexpected %d)" % (len(missing), len(unexpected)))
 
@@ -100,6 +104,10 @@ def prompt_for(i):
         return "%s, %s, %s" % (m["en"], m["zh"], m["desc"])
     if args.style == "zh_only":
         return m["zh"]
+    if args.style == "name":
+        # name only, no visual description: only a LoRA that really learned the
+        # identity can answer this; the base model has never heard of "gomora".
+        return "%s, tokusatsu, full body, cinematic lighting, best quality" % m["en"]
     # "full" == exactly what names.normalize() produces at inference time
     return "%s, %s, full body, tokusatsu, cinematic lighting, best quality" % (
         m["en"], m["desc"])
