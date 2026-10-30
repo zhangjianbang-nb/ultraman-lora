@@ -25,6 +25,9 @@
 所以本项目只在真照片自召回 ≥70% 的 8 个身份上报数字，其余 26 个奥特曼靠人工看图验收。
 细节见 [`docs/evaluation.md`](docs/evaluation.md) 第 8、9 节。
 
+交付的 fp16 权重已实测与验收所用 fp32 权重等价（同种子渲染平均像素差 0.13%，
+sha256 与远端导出件一致），溯源见 [`docs/evaluation.md`](docs/evaluation.md) 第 11 节。
+
 验收脚本 `work/verify.py` 一次跑完四道门（原能力回归、名字影响比、身份准确率仅参考、渲染非空），
 退出码 0 即 PASS。**身份正确性必须人眼看**：`compare_sheet.jpg` 是「参考照片 / base / LoRA-纯名字 /
 LoRA-名字+描述」四行同种子对照表，三轮验收的分数与逐条缺陷记在
